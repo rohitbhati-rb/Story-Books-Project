@@ -32,7 +32,12 @@ router.get('/:id', ensureAuth, async (req, res) => {
         if (!story) {
             return res.render('error/404')
         }
-        res.render('stories/show', { story })
+        if(story.user.displayName === req.user.displayName){
+            res.render('stories/show', { story })
+        }
+        else{
+            throw 404;
+        }
     } catch (err) {
         console.log(err)
         res.render('error/404')
