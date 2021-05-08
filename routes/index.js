@@ -5,8 +5,16 @@ const Story = require('../models/Story')
 
 // @description Login/Landing Page
 // @route GET /
-router.get('/', ensureGuest, (req, res) => {
+router.get('/', (req, res) => {
+    let isLoggedIn = false
+    let displayName = false
+    if (req.isAuthenticated()) {
+        isLoggedIn = true
+        displayName = req.user.displayName
+    }
     res.render('login', {
+        isLoggedIn,
+        displayName,
         layout: 'login'
     })
 })
@@ -15,13 +23,13 @@ router.get('/', ensureGuest, (req, res) => {
 // @route GET /dashboard
 router.get('/dashboard', ensureAuth, async (req, res) => {
     // console.log(req.user)
-    try{
-        const stories = await Story.find({user: req.user.id}).lean()
+    try {
+        const stories = await Story.find({ user: req.user.id }).lean()
         res.render('dashboard', {
             name: req.user.firstName,
             stories
         })
-    }catch(err){
+    } catch (err) {
         console.log(err)
         res.render('error/500')
     }

@@ -1,11 +1,24 @@
-<h3><i class="fas fa-book-reader"></i>StoryBooks</h3>
+<h3><i class="fas fa-book-reader"></i> StoryBooks</h3>
 <div class="section">
-    <p class="lead">
+    <h6>
         Create public and private stories from your life
-    </p>
+    </h6>
 </div>
-<div class="divider"></div>
-<div class="section">
-    <a href="/auth/google" class="btn red darken-1">
-    <i class="fab fa-google left"></i>Log In With Google</a>
-</div>
+{{#if isLoggedIn}}
+    <div class="section">
+        <div class="btns">
+            <a href="/stories" class="btn blue darken-2 home-btns">All Stories</a>
+            <a href="/dashboard" class="btn red accent-3 home-btns">Dashboard</a>
+            <a href="/stories/add" class="btn blue darken-2 home-btns">New Story</a>
+        </div>
+    </div>
+    <div class="section btns">
+        <p class="user-text green lighten-1 btn" style="cursor: default;">{{displayName}}</p>
+        <a href="/auth/logout" class="btn blue-grey darken-4 home-btns">Logout</a>
+    </div>
+{{else}}
+    <div class="section">
+        <a href="/auth/google" class="btn red darken-1">
+        <i class="fab fa-google left"></i>Log In With Google</a>
+    </div>
+{{/if}}

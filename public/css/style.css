@@ -1,8 +1,8 @@
 .p {
-	margin: 10px 0 impo !important;
+	margin: 10px 0 !important;
 }
 .login-container {
-	width: 400px;
+	width: 450px;
 	margin-top: 50px;
 	text-align: center;
 }
@@ -21,4 +21,20 @@
 }
 .user-back-btn{
 	margin: 10px 0 10px 10px;
+}
+.btns{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.home-btns{
+	margin: 0 5px;
+	font-weight: bold;
+}
+.line{
+	margin: 14px 0;
+}
+.user-text{
+	font-weight: bold;
+	border-radius: 3px;
 }
