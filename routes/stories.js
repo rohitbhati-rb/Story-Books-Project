@@ -32,7 +32,8 @@ router.get('/:id', ensureAuth, async (req, res) => {
         if (!story) {
             return res.render('error/404')
         }
-        if(story.user.displayName === req.user.displayName){
+        console.log(story)
+        if(story.status === 'public'){
             res.render('stories/show', { story })
         }
         else{
