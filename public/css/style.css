@@ -1,40 +1,48 @@
 .p {
-	margin: 10px 0 !important;
+  margin: 10px 0 !important;
 }
 .login-container {
-	width: 450px;
-	margin-top: 50px;
-	text-align: center;
+  width: 450px;
+  margin-top: 50px;
+  text-align: center;
 }
 .fa-small {
-	font-size: 16px !important;
+  font-size: 16px !important;
 }
 .btn-float {
-	float: left;
-	margin-right: 10px;
+  float: left;
+  margin-right: 10px;
 }
 .img-small {
-	width: 180px;
+  width: 180px;
 }
-.back-from-story{
-	margin: 10px 0 0 10px;
+.back-from-story {
+  margin: 10px 0 0 10px;
 }
-.user-back-btn{
-	margin: 10px 0 10px 10px;
+.user-back-btn {
+  margin: 10px 0 10px 10px;
 }
-.btns{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.home-btns{
-	margin: 0 5px;
-	font-weight: bold;
+.home-btns {
+  margin: 0 5px;
+  font-weight: bold;
 }
-.line{
-	margin: 14px 0;
+.line {
+  margin: 14px 0;
 }
-.user-text{
-	font-weight: bold;
-	border-radius: 3px;
+.user-text {
+  font-weight: bold;
+  border-radius: 3px;
+}
+#header-link > a {
+  text-align: center;
+  font-size: 18px;
+}
+#bottom-link > a {
+  text-align: center;
+  font-size: 14px;
 }

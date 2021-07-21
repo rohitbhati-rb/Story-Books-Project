@@ -55,6 +55,8 @@ router.get('/', ensureAuth, async (req, res) => {
             .lean()
 
         res.render('stories/index', { stories })
+        console.log(stories[0].createdAt);
+        
     } catch (err) {
         console.log(err)
         res.render('error/500')
